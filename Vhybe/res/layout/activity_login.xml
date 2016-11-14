@@ -1,0 +1,151 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" 
+    android:background="@android:color/white" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLoginStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewLoginStatusMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/scrollViewLoginForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/email_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/email_icon"
+                    android:layout_alignTop="@+id/email_icon"
+                    android:background="@layout/edittext_border_bg"
+                   	android:hint="@string/prompt_email"
+	                android:inputType="textEmailAddress"
+	                android:maxLines="1"
+	                android:singleLine="true"
+                    android:paddingLeft="5dp" >
+
+                </EditText>
+                </LinearLayout>
+
+
+				<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/password_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_key"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/password_icon"
+                    android:layout_alignTop="@+id/password_icon"
+                    android:background="@layout/edittext_border_bg"
+                   	android:hint="@string/prompt_password"
+	                android:imeActionId="@+id/login"
+	                android:imeActionLabel="@string/action_sign_in_short"
+	                android:imeOptions="actionUnspecified"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true"
+                    android:paddingLeft="5dp" >
+
+                </EditText>
+                </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/app_color"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/button_login"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="20dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtDoNot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="160dp"
+                android:text="@string/do_not_have_account" />
+			<Button
+                android:id="@+id/buttonSignUpHere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/app_color"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/button_signup_here"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

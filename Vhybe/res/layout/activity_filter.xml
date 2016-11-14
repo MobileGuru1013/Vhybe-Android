@@ -1,0 +1,288 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/interests_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_heart"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/edt_interests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/interests_icon"
+            android:layout_alignTop="@+id/interests_icon"
+            android:background="@layout/edittext_border_bg"
+            android:ems="10"
+            android:hint="Interests"
+            android:paddingLeft="5dp"
+            android:singleLine="true" >
+        </MultiAutoCompleteTextView>
+    </LinearLayout>
+    <!--
+    <EditText
+        android:id="@+id/edt_interests"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Interests" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_dob"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/gender_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_circle_o"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnMale"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/app_color"
+            android:text="@string/button_profile_male"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnFeMale"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:text="@string/button_profile_female"
+            android:textColor="@color/app_color" />
+
+        <Button
+            android:id="@+id/btnBoth"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:text="@string/button_profile_both"
+            android:textColor="@color/app_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/age_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/linearLayoutSeekBar"
+            android:layout_alignTop="@+id/linearLayoutSeekBar"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_users"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <!--
+             <TextView
+            android:id="@+id/txt_age"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="4"
+            android:gravity="left|center"
+            android:text="Age:" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@layout/edittext_border_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <TextView
+                    android:id="@+id/txt_min_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="11 years"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_max_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="100 years"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_gender"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/status_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_venus_mars"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnSingle"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@color/app_color"
+            android:text="@string/button_profile_single"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnMarried"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/button_border"
+            android:text="@string/button_profile_married"
+            android:textColor="@color/app_color" />
+
+        <Button
+            android:id="@+id/btnStatusBoth"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/button_border"
+            android:text="@string/button_profile_both"
+            android:textColor="@color/app_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/location_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_map_marker"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoTextLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/location_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/location_icon"
+            android:layout_below="@+id/spinner"
+            android:background="@layout/edittext_border_bg"
+            android:ems="10"
+            android:hint="Location"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_occupation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_location"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.fontawesome.TextAwesome
+            android:id="@+id/occupation_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@color/app_color"
+            android:gravity="center"
+            android:text="@string/fa_briefcase"
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoTextOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/occupation_icon"
+            android:layout_alignTop="@+id/occupation_icon"
+            android:background="@layout/edittext_border_bg"
+            android:ems="10"
+            android:hint="@string/occupation"
+            android:paddingLeft="5dp"
+            android:singleLine="true" >
+        </AutoCompleteTextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Search"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@color/app_color"
+        android:text="Search"
+        android:textColor="#fff" />
+
+</LinearLayout>

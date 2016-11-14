@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TimelineActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnChat"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:background="@drawable/button_border"
+            android:text="@string/button_chat"
+            android:textColor="@color/app_color" />
+
+        <Button
+            android:id="@+id/btnFriends"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:background="@color/app_color"
+            android:text="@string/button_friends"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnRequest"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:background="@color/app_color"
+            android:text="@string/button_request"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Chat"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white" >
+
+        <ProgressBar
+            android:id="@+id/progressBarLoadingChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/textViewNoItemsChat"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="@string/no_items_chat"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/lstChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Friend"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white" >
+
+        <ProgressBar
+            android:id="@+id/progressBarLoadingFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/textViewNoItemsFriend"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="@string/no_items_friend"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/lstFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Request"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white" >
+
+        <ProgressBar
+            android:id="@+id/progressBarLoadingRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/textViewNoItemsRequest"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="@string/no_items_request"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/lstRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

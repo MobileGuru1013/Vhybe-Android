@@ -1,0 +1,447 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditProfileActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/relativeLayoutImage"
+                    android:text="@string/text_profile_name" /> -->
+				
+				<TextView 
+				    android:id="@+id/textView_personal"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:textSize="22sp"
+				    android:layout_marginBottom="5dp"
+				    android:textColor="@color/app_color"
+				    android:text="@string/personal"
+				    android:layout_below="@+id/relativeLayoutImage"/>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView_personal">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/fullname_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_user"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/editTextEditFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/fullname_icon"
+                    android:layout_alignTop="@+id/fullname_icon"
+                    android:background="@layout/edittext_border_bg"
+                    android:ems="10"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp" >
+
+                </EditText>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" >
+
+                    <ImageView
+                        android:id="@+id/imageViewProfileUserImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_empty" />
+
+                    <ImageView
+                        android:id="@+id/imageViewUserAvatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="imageViewEditProfileOnClick"
+                        android:src="@drawable/avatar_overlay" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView_personal">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/email_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+            <!-- <TextView
+                android:id="@+id/txtEditEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_profile_name" /> -->
+
+            <EditText
+                android:id="@+id/editTextEditEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:layout_alignBottom="@+id/email_icon"
+                android:layout_alignTop="@+id/email_icon"
+                android:paddingLeft="5dp"
+                android:background="@layout/edittext_border_bg"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/linearLayout_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_email">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/password_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_key"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+            <!-- <TextView
+                android:id="@+id/txtEditEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_profile_name" /> -->
+
+            <TextView
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:padding="5dp"
+                android:textSize="19sp"
+              android:gravity="center_vertical"
+                android:background="@layout/edittext_border_bg"
+                android:textColor="@color/app_color"
+                android:text="@string/changepassword"/>
+
+            </LinearLayout>
+            
+            <TextView 
+				    android:id="@+id/textView_other"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:textSize="22sp"
+				    android:layout_marginTop="10dp"
+				    android:layout_marginBottom="5dp"
+				    android:textColor="@color/app_color"
+				    android:text="@string/other"
+				    android:layout_below="@+id/linearLayout_change_password"/>
+            
+            <LinearLayout
+                android:id="@+id/linearLayout_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView_other">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/dob_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_birthday_cake"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+            
+            <EditText
+                android:id="@+id/editTextEditDOB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:layout_alignBottom="@+id/dob_icon"
+                android:layout_alignTop="@+id/dob_icon"
+                android:paddingLeft="5dp"
+                android:background="@layout/edittext_border_bg"
+                android:focusable="false"
+                android:hint="DOB"
+                android:inputType="date" />
+            
+            </LinearLayout>
+            <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_im_a" /> -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_dob">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/gender_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_circle_o"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+                
+                <Button
+                    android:id="@+id/btnMale"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/app_color"
+                    android:text="@string/button_profile_male"
+                    android:textColor="#fff"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnFeMale"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_border"
+                    android:text="@string/button_profile_female"
+                    android:textColor="@color/app_color"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- <TextView
+                android:id="@+id/txtEditDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_profile_dob" /> -->
+
+            
+
+            <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_im_a" /> -->
+            
+            <LinearLayout
+                android:id="@+id/linearLayout_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_gender">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/status_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_venus_mars"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/btnSingle"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/app_color"
+                    android:text="@string/button_profile_single"
+                    android:textColor="#fff"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnMarried"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_border"
+                    android:text="@string/button_profile_married"
+                    android:textColor="@color/app_color"
+                    android:layout_weight="1" />
+            </LinearLayout>
+         
+
+            <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_profile_interest" /> -->
+
+				<LinearLayout
+                android:id="@+id/linearLayout_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_status">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/interest_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_heart"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/editTextInterest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/interest_icon"
+                android:layout_alignTop="@+id/interest_icon"
+                android:paddingLeft="5dp"
+                android:hint="Interest"
+                android:background="@layout/edittext_border_bg"
+                android:ems="10" >
+            </MultiAutoCompleteTextView>
+            
+            </LinearLayout>
+
+            <!-- <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_profile_location" /> -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_status">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/location_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_map_marker"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+            
+            <AutoCompleteTextView
+                android:id="@+id/autoTextLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/location_icon"
+                android:layout_alignTop="@+id/location_icon"
+                android:paddingLeft="5dp"
+                android:background="@layout/edittext_border_bg"
+                android:hint="Location"
+                android:ems="10" >
+            </AutoCompleteTextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/linearLayout_occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout_location">
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/occupation_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/fa_briefcase"
+                    android:textColor="#fff"
+                    android:background="@color/app_color"
+                    android:textSize="30sp" />
+            
+            <AutoCompleteTextView
+                android:id="@+id/autoTextOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/occupation_icon"
+                android:layout_alignTop="@+id/occupation_icon"
+                android:paddingLeft="5dp"                
+                android:hint="@string/occupation"
+                android:background="@layout/edittext_border_bg"
+                android:ems="10" >
+            </AutoCompleteTextView>
+            </LinearLayout>
+            
+            <Button 
+                android:id="@+id/btn_save"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:background="@color/app_color"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

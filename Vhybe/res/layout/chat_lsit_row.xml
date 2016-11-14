@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+        android:background="@color/gray_color"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp" >
+
+    <ImageView
+        android:id="@+id/imageViewReceiverUserImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:src="@drawable/avatar_overlay_small" />
+
+    <ImageView
+        android:id="@+id/imageViewSenderUserImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="7dp"
+        android:src="@drawable/avatar_overlay_small" />
+
+    <TextView
+        android:id="@+id/txtreciever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="48dp"
+        android:layout_toRightOf="@+id/imageViewReceiverUserImage"
+        android:gravity="left"
+        android:text="rec" />
+
+    <TextView
+        android:id="@+id/txtsender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@+id/imageViewSenderUserImage"
+        android:gravity="right"
+        android:text="sevd" />
+
+    <ImageView
+        android:id="@+id/imgreciever"
+        android:layout_width="190dp"
+        android:layout_height="210dp"
+        android:layout_below="@+id/txtreciever"
+        android:layout_toRightOf="@+id/imageViewReceiverUserImage" />
+
+       <TextView
+        android:id="@+id/txtReciverDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgreciever"
+        android:textSize="9dp"
+          android:text="asdsdfdfdsf"
+        android:layout_toRightOf="@+id/imageViewReceiverUserImage" />
+    <ImageView
+        android:id="@+id/imgsender"
+        android:layout_width="190dp"
+        android:layout_height="210dp"
+        android:layout_below="@+id/txtsender"
+        android:layout_toLeftOf="@+id/imageViewSenderUserImage" />
+    <TextView
+        android:id="@+id/txtSenderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgsender"
+        android:textSize="9dp"
+        android:text="asdsdfdfdsf"
+        android:layout_toLeftOf="@+id/imageViewSenderUserImage" />
+
+</RelativeLayout>

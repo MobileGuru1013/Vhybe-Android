@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.planet1107.welike.views.PostListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/gray_color" >
+
+        <ImageView
+            android:id="@+id/imageViewUserImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="User image"
+            android:focusable="false"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textViewUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageViewUserImage" />
+
+        <com.planet1107.welike.views.PostGridItem
+            android:id="@+id/imageViewPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/imageViewUserImage"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="Post image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:id="@+id/LL_info"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignBottom="@id/imageViewPostImage"
+            android:layout_alignLeft="@id/imageViewPostImage"
+            android:layout_alignRight="@id/imageViewPostImage"
+            android:alpha="0.5"
+            android:background="@color/gray_color" >
+
+            <Button
+                android:id="@+id/buttonLike"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.12"
+                android:background="@null"
+                android:focusable="false" />
+
+            <Button
+                android:id="@+id/buttonLikes"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_weight="0.60"
+                android:background="@null"
+                android:focusable="false"
+                android:text="@string/button_likes" />
+
+            <Button
+                android:id="@+id/buttonComment"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.26"
+                android:gravity="center_vertical|right"
+                android:text="2"
+                android:background="@null"
+                android:drawableRight="@drawable/btn_comment"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewPostText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LL_info"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="User image"
+            android:focusable="false"
+            android:maxHeight="50dp"
+            android:maxWidth="50dp"
+            android:minHeight="50dp"
+            android:minWidth="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar_overlay_timeline" />
+
+        <TextView
+            android:id="@+id/textViewTimeAgo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewUsername"
+            android:layout_alignRight="@+id/textViewUsername"
+            android:layout_below="@+id/textViewUsername"
+            android:textColor="@color/gray_date" />
+    </RelativeLayout>
+
+ 
+ 
+
+</com.planet1107.welike.views.PostListItem>

@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TimelineActivity" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewProfileUserImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imageViewCommentUserImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageViewProfileUserImage"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription=""
+                    android:src="@drawable/avatar_overlay" />
+
+                <TextView
+                    android:id="@+id/textViewProfileUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewProfileUserImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/textAwesomeLogout"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/app_color"
+                    android:textSize="30sp"
+                    android:layout_alignTop="@+id/imageViewProfileUserImage"
+                    android:text="@string/fa_sign_out" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/textawesome_gender"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="@string/fa_mars"
+                    android:textColor="@color/app_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="1dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/app_color" />
+
+                <TextView
+                    android:id="@+id/textViewStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/app_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.fontawesome.TextAwesome
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/fa_map_marker"
+                    android:textColor="@color/app_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/app_color" />
+            </LinearLayout>
+
+            <Button 
+                android:id="@+id/buttonAdd"
+                android:layout_width="164dp"
+               android:layout_height="42dp"
+              
+                    android:background="@color/app_color"
+                    android:layout_margin="2dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                   android:textColor="#fff"
+                android:layout_gravity="center_horizontal"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <com.fontawesome.TextAwesome
+                    android:id="@+id/textAwesomeOccupation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="@string/fa_briefcase"
+                    android:textColor="@color/app_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/textViewOccupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/app_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/app_color"
+                    android:gravity="center"
+                    android:text="Button"
+                    android:textColor="#fff"/>
+
+                <Button
+                    android:id="@+id/buttonPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/app_color"
+                    android:gravity="center"
+                    android:text="Button"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lableInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Interests"
+                android:textColor="@color/app_color"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/textViewInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="dsfs" />
+
+            <TextView
+                android:id="@+id/lableActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="Recent Activity"
+                android:textColor="@color/app_color"
+                android:textSize="24sp"/>
+
+            <com.planet1107.welike.views.NestedListView
+                android:id="@+id/listViewRecentActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+            </com.planet1107.welike.views.NestedListView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

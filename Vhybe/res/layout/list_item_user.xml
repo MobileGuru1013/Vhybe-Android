@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.planet1107.welike.views.UserListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_color"
+    android:paddingBottom="15dp" >
+
+    <ImageView
+        android:id="@+id/imageViewUserUserImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignParentLeft="true"
+     	android:layout_alignParentTop="true" />
+
+   	<ImageView
+   	    android:id="@+id/imageView1"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_margin="15dp"
+   	    android:src="@drawable/avatar_overlay_small" 
+   	    android:layout_alignParentLeft="true"
+     	android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/textViewUserUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFollowUnfollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:focusable="false"
+        android:src="@drawable/btn_follow" />
+
+</com.planet1107.welike.views.UserListItem>

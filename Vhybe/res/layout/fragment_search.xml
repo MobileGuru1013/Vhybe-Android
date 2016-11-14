@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TimelineActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNearBy"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="27dp"
+            android:background="@drawable/button_border"
+            android:text="@string/button_near_by"
+            android:textColor="@color/app_color" />
+
+        <Button
+            android:id="@+id/btnCustom"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="120dp"
+            android:layout_height="27dp"
+            android:background="@color/app_color"
+            android:text="@string/button_custom"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/etCustomSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical"
+        android:iconifiedByDefault="true"
+        android:queryHint="Enter search text"
+        android:singleLine="true"
+        android:visibility="gone" >
+    </SearchView>
+
+    <TextView
+        android:id="@+id/txt_no_Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:text="There no results found" />
+
+    <ListView
+        android:id="@+id/lstNearBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/lstCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

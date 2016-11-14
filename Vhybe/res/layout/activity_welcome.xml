@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".WelcomeActivity" >
+
+    <Button
+        android:id="@+id/buttonComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/white"
+        android:onClick="buttonRegisterOnClick"
+        android:text="@string/button_register"
+        android:textColor="@color/app_color" />
+
+    <Button
+        android:id="@+id/buttonLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonComment"
+        android:layout_alignLeft="@+id/buttonComment"
+        android:layout_alignRight="@+id/buttonComment"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/white"
+        android:onClick="buttonLoginOnClick"
+        android:text="@string/button_login"
+        android:textColor="@color/app_color" />
+
+</RelativeLayout>
